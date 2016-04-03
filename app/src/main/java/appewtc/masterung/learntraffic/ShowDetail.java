@@ -29,6 +29,11 @@ public class ShowDetail extends AppCompatActivity {
         int intImage = getIntent().getIntExtra("Icon", R.drawable.traffic_01);
         trafficImageView.setImageResource(intImage);
 
+        int intIndex = getIntent().getIntExtra("Index", 0);
+        String[] detailStrings = getResources()
+                .getStringArray(R.array.detail);
+        detailTextView.setText(detailStrings[intIndex]);
+
     }   // Main Method
 
 }   // Main Class
